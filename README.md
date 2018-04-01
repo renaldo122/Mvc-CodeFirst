@@ -13,3 +13,5 @@ Barcode	Kod	Name	Furnitor	Marka	Klasifikimi	Quantity	Price )
 -You can Export Products
 -You can compare lists of products based on Furnitor and Marks
 -You can Export all Compared products
+
+Find more information about this app on https://codefield.io/
