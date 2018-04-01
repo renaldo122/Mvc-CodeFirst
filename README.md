@@ -1,7 +1,8 @@
 SetUp Project:
 
 -This project is Mvc Code First
--Got to Web.config change the connectionStrings,start the application and the database will be automatically created.
+
+-Go to Web.config change the connectionStrings,start the application and the database will be automatically created.
 
 Specification:
 
