@@ -1,0 +1,43 @@
+﻿@model Mvc.Domain.ViewModels.ImportViewModel
+@using System.Data
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm("Import", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken();
+    <div class="form-horizontal">
+        <h4>Import Product</h4>
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Upload Excel File</label>
+            <div class="col-md-10 ">
+                <input type="file" class="form-control" name="uploadfile" id="uploadfile" />
+            </div>
+        </div>
+       
+        <br />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CategoryId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.CategoryId, "--Select--", new { id = "CategoryId", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeleteExisting, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.CheckBoxFor(m => m.DeleteExisting, new { @class = "" })
+                @Html.ValidationMessageFor(model => model.DeleteExisting, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <input type="submit" value="Importo" class="btn btn-default" />
+    </div>
+
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
