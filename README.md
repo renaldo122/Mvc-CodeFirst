@@ -10,7 +10,7 @@ Specification:
 
 -In this project you can create Furnitors
 
--You can create products linked for a specifice furinitor.
+-You can create products linked for a specific furinitor.
 
 -You can import products from Excel 
 (To import from Excel the header of excel should have the columns with names as showed in the list of products 
